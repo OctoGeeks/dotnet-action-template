@@ -1,7 +1,10 @@
 name: 'Dotnet XPlat Action'
 description: 'sample dotnet based action'
+inputs:
+  input-a:
+    required: true
+  input-b:
+    required: true
 runs:
-  using: "composite"
-  steps:
-    - run: ${{ github.action_path }}/run-action.ps1
-      shell: pwsh
+  using: 'node12'
+  main: 'index.js'
