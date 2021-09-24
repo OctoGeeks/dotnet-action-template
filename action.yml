@@ -1,10 +1,11 @@
-name: 'Dotnet XPlat Action'
+name: 'Sample Dotnet Action'
 description: 'sample dotnet based action'
+author: 'Your name or organization here'
 inputs:
-  input-a:
+  milliseconds:
     required: true
-  input-b:
-    required: true
+    description: 'input description here'
+    default: 'default value if applicable'
 runs:
   using: 'node12'
   main: 'index.js'
