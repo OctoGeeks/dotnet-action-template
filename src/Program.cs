@@ -20,7 +20,7 @@ namespace dotnet_sample_action
                  await Task.Delay(int.Parse(ms));
                  _core.Debug(DateTime.Now.ToLongTimeString());
 
-                 // _core.SetOutput("time", DateTime.Now.ToLongTimeString());
+                 _core.SetOutput("time", DateTime.Now.ToLongTimeString());
             }
             catch (Exception ex)
             {
