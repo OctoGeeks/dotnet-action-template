@@ -14,11 +14,11 @@ namespace dotnet_sample_action
             try
             {
                  var ms = _core.GetInput("milliseconds");
-                 _core.Debug($"Waiting {ms} milliseconds..."); // debug is only output if you set teh secret ACTIONS_RUNNER_DEBUG to true
+                 _core.Info($"Waiting {ms} milliseconds..."); // debug is only output if you set teh secret ACTIONS_RUNNER_DEBUG to true
 
                  _core.Debug(DateTime.Now.ToShortTimeString());
                  await Task.Delay(int.Parse(ms));
-                 _core.Debug(DateTime.Now.ToShortTimeString());
+                 _core.Info(DateTime.Now.ToShortTimeString());
 
                  _core.SetOutput("time", DateTime.Now.ToShortTimeString());
             }
