@@ -15,5 +15,4 @@ jobs:
       shell: pwsh
     - uses: ./
       with:
-        input-a: hello dylan
-        input-b: world
+        milliseconds: 5000
