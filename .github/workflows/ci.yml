@@ -14,5 +14,14 @@ jobs:
     - run: ./build.ps1
       shell: pwsh
     - uses: ./
+      id: sample
       with:
         milliseconds: 5000
+    - run: |
+        if ("${{ steps.sample.outputs.time }}") {
+          Write-Output "Output Value Found [${{ steps.sample.outputs.time }}]"
+        } else {
+          Write-Error "No output value found"
+          exit 1
+        }
+      shell: pwsh
