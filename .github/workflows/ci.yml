@@ -11,13 +11,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: ./build.ps1
+    - name: Build Code
+      run: ./build.ps1
       shell: pwsh
-    - uses: ./
+    - name: Run Action
+      uses: ./
       id: sample
       with:
         milliseconds: 5000
-    - run: |
+    - name: Test Outputs
+      run: |
         if ("${{ steps.sample.outputs.time }}") {
           Write-Output "Output Value Found [${{ steps.sample.outputs.time }}]"
         } else {
