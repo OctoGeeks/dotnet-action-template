@@ -1,6 +1,8 @@
 # .Net Action Template
 This repo is a template you can use to write your own custom GitHub Action using .Net/C#.
 
+You can see an example of an action created using this template here: [send-workflow-notifications](https://github.com/OctoGeeks/send-workflow-notifications)
+
 # Why this and not a docker-based action
 The standard advice is if you want to write an action in a language other than the few with built-in support, is to use a docker-based action, where you can install all the runtime dependencies your language/tech stack requires.
 
