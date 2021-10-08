@@ -1,8 +1,9 @@
 const { execSync } = require('child_process');
 const os = require('os');
+const path = require('path');
 
 try {
-  execSync('./run-action.ps1', { stdio: 'inherit', shell: "pwsh" });
+  execSync(path.join(__dirname, 'run-action.ps1'), { stdio: 'inherit', shell: "pwsh" });
 } 
 catch(err) {
   process.exitCode = 1;
