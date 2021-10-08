@@ -3,7 +3,7 @@ runs:
   using: 'composite'
   steps:
     - name: Run Action
-      uses: $$CUSTOM_ACTION_REPO$$@$$GITHUB_SHA$$
+      uses: __CUSTOM_ACTION_REPO__@__GITHUB_SHA__
       id: sample
       with:
         milliseconds: 5000
