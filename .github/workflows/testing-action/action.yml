@@ -2,7 +2,6 @@ name: Composite Action for Testing
 runs:
   using: 'composite'
   steps:
-    - uses: 
     - name: Run Action
       uses: $$CUSTOM_ACTION_REPO$$@$$GITHUB_SHA$$
       id: sample
