@@ -18,5 +18,8 @@ jobs:
       run: |
         (Get-Content -Path ./.github/workflows/testing-action/action.yml -Raw) -replace '$$CUSTOM_ACTION_REPO$$',$env:GITHUB_REPO -replace '$$GITHUB_SHA$$',$ENV:GITHUB_SHA | Set-Content -Path ./.github/workflows/testing-action/action.yml
       shell: pwsh
+    - name: Debug Stuff
+      run: Get-Content -path ./.github/workflows/testing-action/action.yml
+      shell: pwsh
     - name: Run Action
       uses: ./.github/workflows/testing-action
