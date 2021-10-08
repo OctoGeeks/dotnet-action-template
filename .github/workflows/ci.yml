@@ -15,7 +15,7 @@ jobs:
       run: ./build.ps1
       shell: pwsh
     - name: Run Action
-      uses: octogeeks/dotnet-action-template@${{ github.sha }} # change this to point to your custom action repo
+      uses: ./
       id: sample
       with:
         milliseconds: 5000
